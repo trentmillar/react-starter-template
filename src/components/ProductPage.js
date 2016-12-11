@@ -10,27 +10,28 @@ import widgets from '../../mocks/data/widgets';
 export default class ProductPage extends React.Component {
   render() {
     const id = this.props.params.id;
-    const product = products.filter((product) => product.id === id)[0];
+    const product = widgets.filter((product) => product.id === id)[0];
     if (!product) {
-      return <NotFoundPage/>;
+      //return <NotFoundPage/>;
+      return <span>Not FountM</span>;
     }
-    const headerStyle = { backgroundImage: `url(/images/${product.cover})` };
+    const headerStyle = { backgroundImage: 'url(/images/${product.cover})' };
     return (
       <div className="product-full">
         <ProductsMenu/>
         <div className="product">
           <header style={headerStyle}/>
           <div className="picture-container">
-            <img src={'/images/${product.image}'}/>
+            <img src={`/images/${product.image}`}/>
             <h2 className="name">{product.name}</h2>
           </div>
           <section className="description">
             Merchant is from <strong><Flag code={product.country} showName="true"/></strong>.
           </section>
-          <section className="shipping">
-            <p>Winner of <strong>{product.shippingTypes.length}</strong> shipping:</p>
+          <section className="stock">
+            <p>There are <strong>{product.stock.length}</strong> merchants selling this:</p>
             <ul>{
-              product.shippingTypes.map((shippingType, i) => <ShippingType key={i} {...shippingType}/>)
+              product.stock.map((merchant, i) => <StockItem key={i} {...merchant}/>)
             }</ul>
           </section>
         </div>

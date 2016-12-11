@@ -7,8 +7,10 @@
     "test": "tests"
   },
   "scripts": {
+    "clean": "rimraf src/public/js/bundle.js",
     "build": "NODE_ENV=production node_modules/.bin/webpack -p",
     "serve": "node_modules/.bin/http-server src/public",
+    "all": "run-s clean build serve",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -43,7 +45,10 @@
   },
   "devDependencies": {
     "babel-loader": "^6.2.9",
+    "html-webpack-plugin": "^2.24.1",
     "http-server": "^0.9.0",
+    "npm-run-all": "^3.1.2",
+    "rimraf": "^2.5.4",
     "webpack": "^1.14.0"
   }
 }

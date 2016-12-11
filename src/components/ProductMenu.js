@@ -8,7 +8,7 @@ export default class ProductMenu extends React.Component {
     return (
       <nav className="product-menu">
         {widgets.map(menuProduct => {
-          return <Link key={menuProduct.id} to={'/product/${menuProduct.id}'} activeClassName="active">
+          return <Link key={menuProduct.id} to={`/product/${menuProduct.id}`} activeClassName="active">
             {menuProduct.name}
           </Link>;
         })}
