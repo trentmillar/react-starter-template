@@ -3,6 +3,7 @@ const widgets = [{
   'name': 'Nunc lobortis',
   'price': '10.00',
   'currency': 'usd',
+  'country': 'us',
   'image': 'item1-full.jpg',
   'cover': 'item1-small.jpg',
   'stock': [{

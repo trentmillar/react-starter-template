@@ -1,6 +1,4 @@
-// src/components/StockItem.js
 import React from 'react';
-
 
 export default class StockItem extends React.Component {
   render() {

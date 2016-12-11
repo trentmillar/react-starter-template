@@ -4,6 +4,7 @@ import { Link } from 'react-router';
 import NotFoundPage from './NotFoundPage';
 import ProductMenu from './ProductMenu';
 import ShippingType from './ShippingType';
+import StockItem from './StockItem';
 import Flag from './Flag';
 import widgets from '../../mocks/data/widgets';
 
@@ -15,14 +16,14 @@ export default class ProductPage extends React.Component {
       //return <NotFoundPage/>;
       return <span>Not FountM</span>;
     }
-    const headerStyle = { backgroundImage: 'url(/images/${product.cover})' };
+    const headerStyle = { backgroundImage: '{`url(/images/${product.cover})`}' };
     return (
       <div className="product-full">
-        <ProductsMenu/>
+        <ProductMenu/>
         <div className="product">
           <header style={headerStyle}/>
           <div className="picture-container">
-            <img src={`/images/${product.image}`}/>
+            <img src={`/images/${product.cover}`}/>
             <h2 className="name">{product.name}</h2>
           </div>
           <section className="description">

@@ -33,5 +33,8 @@ module.exports = {
       beautify: false,
       dead_code: true
     })
-  ]
+  ],
+  // Choose a developer tool to enhance debugging
+  // http://webpack.github.io/docs/configuration.html#devtool
+  devtool: process.env.IS_DEBUG ? 'source-map' : false
 };

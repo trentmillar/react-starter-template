@@ -7,10 +7,10 @@
     "test": "tests"
   },
   "scripts": {
-    "clean": "rimraf src/public/js/bundle.js",
-    "build": "NODE_ENV=production node_modules/.bin/webpack -p",
-    "serve": "node_modules/.bin/http-server src/public",
     "all": "run-s clean build serve",
+    "build": "NODE_ENV=production IS_DEBUG=true node_modules/.bin/webpack -p",
+    "clean": "rimraf src/public/js/bundle.js",
+    "serve": "node_modules/.bin/http-server src/public",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
