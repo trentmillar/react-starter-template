@@ -1,12 +1,11 @@
 // src/components/ProductPage.js
 import React from 'react';
 import { Link } from 'react-router';
-import NotFoundPage from './NotFoundPage';
-import ProductMenu from './ProductMenu';
-import ShippingType from './ShippingType';
-import StockItem from './StockItem';
-import Flag from './Flag';
-import widgets from '../../mocks/data/widgets';
+import ProductMenu from '../ProductMenu';
+import ShippingType from '../ShippingType';
+import StockItem from '../StockItem';
+import Flag from '../Flag';
+import widgets from '../../../mocks/data/widgets';
 
 export default class ProductPage extends React.Component {
   render() {
